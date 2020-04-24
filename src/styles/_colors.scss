@@ -1,0 +1,33 @@
+/**
+  Cores
+
+  @autor: Sanderson Soares
+  @section: Variáveis e Mixins de Cores em Sass para uso útil dos estilos.
+
+ */
+
+$cores: (
+    primary: #DDA455,
+    secondary: #000000,
+    success: #12d061,
+    danger: lighten(#ff3636, 6%),
+    warning: #f58634,
+    info: lighten(#2ca8ff, 6%),
+    light: #f8f9fa,
+    muted: #737373,
+    dark: #000000,
+    facebook: #3b5998,
+    youtube: #e52d27,
+    twitter: #55acee,
+    instagram: #e94658,
+);
+
+@each $status, $cor in $cores {
+    .text-#{$status} {
+        color: $cor !important;
+    }
+
+    .bg-#{$status} {
+        background-color: $cor !important;
+    }
+}

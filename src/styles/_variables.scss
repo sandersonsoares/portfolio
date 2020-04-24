@@ -1,0 +1,18 @@
+/*
+  Variáveis E Mixins
+
+  @autor: Sanderson Soares
+  @section: Variáveis, Mixins e PlaceHolders em Sass para uso útil dos estilos.
+  */
+
+// Vaiáveis
+$transition-duration: 400ms;
+$border-radius: 0px;
+$border: 2px;
+
+// Mixins
+@mixin transacao-efeito() {
+  transition-duration: $transition-duration;
+  -moz-transition-duration: $transition-duration;
+  -webkit-transition-duration: $transition-duration;
+}

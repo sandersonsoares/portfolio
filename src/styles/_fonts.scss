@@ -1,0 +1,77 @@
+/**
+*  Fontes
+*  @autor: Sanderson Soares
+*  @section: Configuração de Fontes da aplicação. 
+*/
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:400,600");
+
+body {
+  font-family: "Merriweather", sans-serif;
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  // text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.navbar {
+  font-family: "Merriweather", sans-serif;
+}
+
+p {
+  font-weight: 400;
+}
+
+.small-font {
+  font-size: 10px;
+}
+
+.normal-font {
+  font-size: 13px;
+}
+
+.big-font {
+  font-size: 16px;
+}
+
+//-----------------------------------------------------------------
+// Font size
+//
+$font-size-list: 8 9 10 11 12 13 14 15 16 17 18 19 20 22 24 25 26 28 30 35 40 45 50 60 70 80 90;
+@each $value in $font-size-list {
+  .fs-#{$value} {
+    font-size: #{$value}px !important;
+
+    @if $value > 29 {
+      line-height: 1.2;
+    }
+  }
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .fs-sm-#{$value} {
+      font-size: #{$value}px !important;
+    }
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .fs-md-#{$value} {
+      font-size: #{$value}px !important;
+    }
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .fs-lg-#{$value} {
+      font-size: #{$value}px !important;
+    }
+  }
+}
